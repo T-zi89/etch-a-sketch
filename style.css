@@ -1,10 +1,19 @@
 #container {
-
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+max-width: 500px;
+border: 2px solid;
+padding: 20px;
+margin: 50px
 
 }
 
 .grid {
+    display: block;
     background: blue;
-    display: flex;
-    align-items: column;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    flex-basis: 20px;     
 }
