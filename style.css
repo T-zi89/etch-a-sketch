@@ -1,25 +1,20 @@
 #container {
-display: flex;
-flex-wrap: wrap;
-margin: 0;
-
-}
-
-#etch-a-sketch {
-    height: 600px;
-    width: 600px;
-    border: 10px solid;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    
-}
-
-.grid {
-    background: blue;
-    border: 1px solid;
     margin: 0;
-    flex-grow: 1;
-    box-sizing: border-box;
-    flex: 1 0 0;    
-}
+    
+    }
+    
+    #canvas {
+        height: 500px;
+        width: 500px;
+        border: 10px solid;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .squares {
+        background: blue;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
