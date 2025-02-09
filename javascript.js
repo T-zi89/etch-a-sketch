@@ -10,21 +10,19 @@ let gridDefault = 16
 // the canvas by the number of squares so that it stays constant
 // e.g. if the square number is 10 and the canvas is 500px*500px
 // 500/10 = 50px for the height and 50 px for the width of every div 
-let squares = window.prompt("Squares")
-function createGrid(squares) {
-    const squareSize = 500/squares;
-for(i = 0; i < squares*squares; i++) {
+let promptNum = window.prompt("Squares")
+function createGrid(promptNum) {
+    const squareSize = 500/promptNum;
+for(i = 0; i < promptNum*promptNum; i++) {
     const squares = document.createElement("div");
     squares.classList.add("squares");
-    squares.style.width = `${squareSize}px`
-    squares.style.width = `${squareSize}px`
+    squares.style.width = `${squareSize}px`;
+    squares.style.width = `${squareSize}px`;
     squares.textContent = "";
     canvas.appendChild(squares);
 }}
 
-
-
-
-
-
-createGrid(squares)
+squares.addEventListener (onclick, () => {
+    squares.style.backgroundColor = "red";
+})
+createGrid(promptNum)
