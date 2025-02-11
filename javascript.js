@@ -1,6 +1,7 @@
 console.log("Etch-A-Sketch")
 const cointainer = document.getElementById("container");
 const canvas = document.getElementById("canvas");
+
 let gridDefault = 16
 
 
@@ -17,12 +18,28 @@ for(i = 0; i < promptNum*promptNum; i++) {
     const squares = document.createElement("div");
     squares.classList.add("squares");
     squares.style.width = `${squareSize}px`;
-    squares.style.width = `${squareSize}px`;
+    squares.style.height = `${squareSize}px`;
     squares.textContent = "";
     canvas.appendChild(squares);
-}}
+    squares.addEventListener("mouseover", changeColor)
+    }
+}
 
-squares.addEventListener (onclick, () => {
-    squares.style.backgroundColor = "red";
-})
 createGrid(promptNum)
+
+canvas.style.color = "red"
+
+function alertFunction() {
+    alert("click");
+}
+
+function changeColor() {
+    console.log("Hello World")
+    this.style.backgroundColor = "red";
+}
+
+const clearCanvasBtn = document.getElementById("clearCanvas")
+
+clearCanvasBtn.addEventListener("click", () => {
+squares.style.backgroundColor = "blue";
+})
