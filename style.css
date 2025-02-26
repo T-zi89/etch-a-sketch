@@ -20,19 +20,14 @@
         align-items: center;
     }
 
-    #canvas {
-        height: 500px;
-        width: 500px;
-        border: 10px solid;
+    #board {
+        max-height: 500px;
+        max-width: 500px;
+        border: 10px solid red;
         display: flex;
         flex-wrap: wrap;
     }
-    
-    .squares {
-        background: blue;
-        border: 1px solid black;
-        box-sizing: border-box;
-    }
+
 
     #clearCanvas {
         align-self: flex-start;
