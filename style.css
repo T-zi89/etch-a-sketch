@@ -10,14 +10,17 @@
         display: flex;
         justify-content: space-around;
         gap: 50px;
+        padding: 20px;
+        border: 10px solid green;
+        margin: 10px;
 
     }
 
     #toolBar {
         display: flex;
         flex-direction: column;
-    
         align-items: center;
+        gap: 10px;
     }
 
     #board {
@@ -28,6 +31,11 @@
         flex-wrap: wrap;
     }
 
+    button {
+        width: 5rem;
+        height: 3rem;
+        border-color: turquoise;
+    }
 
     #clearCanvas {
         align-self: flex-start;

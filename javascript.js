@@ -1,4 +1,5 @@
 
+
 console.log("Etch-A-Sketch")
 const cointainer = document.getElementById("container");
 const divContainer = document.getElementById("divContainer");
@@ -43,9 +44,16 @@ function getSize() {
         }
 }
 
-// function alertFunction() {
-//     alert("click");
-// }
+board.addEventListener("mouseover", (e) => {
+    
+    if (e.target == board) {
+        console.log("not a div");
+    } else if (e.target.tagName == "DIV") {
+        console.log("div");
+        //console.log(e.target)
+        e.target.style.backgroundColor = "green";
+    }
+})
 
 function colorDiv() {
 if (color == "red") {
@@ -53,6 +61,7 @@ if (color == "red") {
 } else if (color == "white") {
     this.style.backgroundColor = "white";
 }}
+
 
 function resetBoard() { 
     const allDivs = board.querySelectorAll(".divs");
@@ -85,3 +94,16 @@ newBoardBtn.addEventListener("click", () => {
 })
 
 createGrid(size)
+
+function rainbow() {
+    r = Math.floor(Math.random() * 255)
+    g = Math.floor(Math.random() * 255)
+    b = Math.floor(Math.random() * 255)
+    getRgb = [r,g,b]
+    rgb = getRgb.join(",")
+
+console.log(rgb)
+}
+
+const button = document.getElementByTagName("button")
+button.style.color = "blue"
